@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e83e3b3-5711-4ba4-9c37-cb5772174ae7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="5e83e3b3-5711-4ba4-9c37-cb5772174ae7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -58,7 +55,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helloworld/demo/demo8.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-829" />
+            <state relative-caret-position="960">
+              <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -80,7 +79,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="91" />
     <option name="y" value="24" />
     <option name="width" value="1440" />
@@ -99,6 +98,11 @@
               <item name="threejs-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs-learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="threejs-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -110,6 +114,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,22 +142,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552361542197</updated>
-      <workItem from="1552361544021" duration="1711000" />
+      <workItem from="1552361544021" duration="2256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1711000" />
+    <option name="totallyTimeSpent" value="2256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="291" width="1440" height="811" extended-state="0" />
+    <frame x="91" y="24" width="1440" height="811" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32962447" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -178,7 +188,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helloworld/demo/demo8.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829" />
+        <state relative-caret-position="960">
+          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        </state>
       </provider>
     </entry>
   </component>
