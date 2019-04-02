@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GUI介绍</title>
+    <title>GUI示例第二弹</title>
     <style type="text/css">
         html, body {
             margin: 0;
@@ -43,37 +43,59 @@
     var scene;
     function initScene() {
         scene = new THREE.Scene();
-        // （雾的颜色，雾化开始的距离相机的位置，全雾化距离相机的位置）
-        scene.fog = new THREE.Fog(0xffffff,100,120);
-        // 随着距离呈指数增长的雾化效果，只需要设置雾的颜色和浓度即可
-        // scene.fog = new THREE.FogExp2(0xffffff,0.009);
     }
 
     //初始化dat.GUI简化试验流程
-    var gui;
+    var settings;
     function initGui() {
         //声明一个保存需求修改的相关数据的对象
-        gui = {
-            lightY:30, //灯光y轴的位置
-            sphereX:0, //球的x轴的位置
-            sphereZ:0, //球的z轴的位置
-            cubeX:25, //立方体的x轴位置
-            cubeZ:-5, //立方体的z轴的位置
-            opacity:0.5, // 物体透明度
-            sphereScale:1,//球大小
-            cubeScale:1,//立方体大小
-        };
-        var datGui = new dat.GUI();
-        //将设置属性添加到gui当中，gui.add(对象，属性，最小值，最大值）
-        datGui.add(gui,"lightY",0,100);
-        datGui.add(gui,"sphereX",-30,30);
-        datGui.add(gui,"sphereZ",-30,30);
-        datGui.add(gui,"cubeX",0,60);
-        datGui.add(gui,"cubeZ",-30,30);
-        datGui.add(gui,"opacity",0,1);
-        datGui.add(gui,"sphereScale",0,10);
-        datGui.add(gui,"cubeScale",0,10);
+        settings = {
+            positionX:0,
+            positionY:5,
+            positionZ:0,
+            rotationX:0,
+            rotationY:0,
+            rotationZ:0,
+            scaleX:1,
+            scaleY:1,
+            scaleZ:1,
+            translateX:0,
+            translateY:0,
+            translateZ:0,
+            translate:function () {
+                //cube.translate(settings.translateX,settings.translateY,settings.translateZ);
+                cube.translateX(settings.translateX);
+                cube.translateY(settings.translateY);
+                cube.translateZ(settings.translateZ);
 
+                settings.positionX = cube.position.x;
+                settings.positionY = cube.position.y;
+                settings.positionZ = cube.position.z;
+            },
+            visible:true
+        };
+
+        //初始化gui
+        var gui = new dat.GUI();
+
+        var position = gui.addFolder("position");
+        position.add(settings,"positionX",-30,30).listen();
+        position.add(settings,"positionY",-30,30).listen();
+        position.add(settings,"positionZ",-30,30).listen();
+        var scale = gui.addFolder("scale");
+        scale.add(settings,"scaleX",0.01,5);
+        scale.add(settings,"scaleY",0.01,5);
+        scale.add(settings,"scaleZ",0.01,5);
+        var rotation = gui.addFolder("rotation");
+        rotation.add(settings,"rotationX",-2*Math.PI,2*Math.PI);
+        rotation.add(settings,"rotationY",-2*Math.PI,2*Math.PI);
+        rotation.add(settings,"rotationZ",-2*Math.PI,2*Math.PI);
+        var translate = gui.addFolder("translate");
+        translate.add(settings,"translateX",-5,5);
+        translate.add(settings,"translateY",-5,5);
+        translate.add(settings,"translateZ",-5,5);
+        translate.add(settings,"translate");
+        gui.add(settings,"visible");
     }
 
     var light;
@@ -89,47 +111,18 @@
         scene.add(light);
     }
 
-    var sphere,cube;
+    var cube;
     function initModel() {
-        //球
-        var sphereGeometry = new THREE.SphereGeometry(5,200,200);
-        var sphereMaterial = new THREE.MeshLambertMaterial({color:0x00ffff,transparent: true});
-
-        sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        sphere.material.opacity=0.5
-        sphere.position.y = 5;
-
-
-        //告诉球需要投射阴影
-        sphere.castShadow = true;
-
-        scene.add(sphere);
-
-
-        //光源的球
-        var spGeometry = new THREE.SphereGeometry(0.5,20,20);
-        var spMaterial = new THREE.MeshPhysicalMaterial({color:0xffffff});
-        // spMaterial.alphaMap=0.5
-        var sp = new THREE.Mesh(spGeometry,spMaterial);
-
-        sp.position.set(15,30,10);
-
-        scene.add(sp);
 
         //辅助工具
         var helper = new THREE.AxisHelper(10);
         scene.add(helper);
 
         //立方体
-        var cubeGeometry = new THREE.CubeGeometry(10,10,8);
-        var cubeMaterial = new THREE.MeshLambertMaterial({color:0x00ffff,transparent: true});
+        var cubeGeometry = new THREE.CubeGeometry(10,10,10);
+        var cubeMaterial = new THREE.MeshLambertMaterial({color:0x00ffff});
 
         cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        cube.material.opacity=0.5
-        cube.position.x = 25;
-        cube.position.y = 5;
-        cube.position.z = -5;
-        cube.scale.set(2,2,2)
 
         //告诉立方体需要投射阴影
         cube.castShadow = true;
@@ -191,7 +184,6 @@
 
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        render();
         renderer.setSize( window.innerWidth, window.innerHeight );
 
     }
@@ -204,19 +196,10 @@
         stats.update();
 
         //更新相关位置
-        light.position.y = gui.lightY;
-        sphere.position.x = gui.sphereX;
-        sphere.position.z = gui.sphereZ;
-        cube.position.x = gui.cubeX;
-        cube.position.z = gui.cubeZ;
-
-        // 更新透明度
-        sphere.material.opacity=gui.opacity;
-        cube.material.opacity=gui.opacity;
-
-        //
-        sphere.scale.set(gui.sphereScale,gui.sphereScale,gui.sphereScale)
-        cube.scale.set(gui.cubeScale,gui.cubeScale,gui.cubeScale);
+        cube.position.set(settings.positionX,settings.positionY,settings.positionZ);
+        cube.scale.set(settings.scaleX,settings.scaleY,settings.scaleZ);
+        cube.rotation.set(settings.rotationX,settings.rotationY,settings.rotationZ);
+        cube.visible = settings.visible;
 
         controls.update();
 

@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e83e3b3-5711-4ba4-9c37-cb5772174ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helloworld/demo/demo10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helloworld/demo/demo9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helloworld/file/geometryAndMesh.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helloworld/file/threeIntroduce.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helloworld/lib/dat.gui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helloworld/lib/fonts/gentilis_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloworld/demo/demo11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloworld/lib/OrbitControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/helloworld/lib/controls/OrbitControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloworld/lib/TrackballControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/helloworld/lib/controls/TrackballControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/demo/demo10.html" beforeDir="false" afterPath="$PROJECT_DIR$/helloworld/demo/demo10.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,19 +27,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="576" />
+          <entry key="html" value="614" />
           <entry key="md" value="485" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="576" />
+          <entry key="HTML" value="614" />
           <entry key="PLAIN_TEXT" value="485" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="7" />
+          <entry key="html" value="8" />
           <entry key="js" value="1" />
           <entry key="json" value="2" />
           <entry key="md" value="2" />
@@ -53,7 +47,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -81,11 +75,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helloworld/demo/demo10.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+            <state relative-caret-position="705">
+              <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helloworld/demo/demo11.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -141,6 +144,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>helper</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -152,6 +160,7 @@
         <option value="$PROJECT_DIR$/helloworld/file/geometryAndMesh.md" />
         <option value="$PROJECT_DIR$/helloworld/file/threeIntroduce.md" />
         <option value="$PROJECT_DIR$/helloworld/demo/demo10.html" />
+        <option value="$PROJECT_DIR$/helloworld/demo/demo11.html" />
       </list>
     </option>
   </component>
@@ -247,12 +256,12 @@
       <option name="presentableId" value="Default" />
       <updated>1552361542197</updated>
       <workItem from="1552361544021" duration="9375000" />
-      <workItem from="1554184447017" duration="4872000" />
+      <workItem from="1554184447017" duration="5622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14247000" />
+    <option name="totallyTimeSpent" value="14997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -344,8 +353,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helloworld/demo/demo10.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        <state relative-caret-position="705">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld/demo/demo11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>
