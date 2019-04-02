@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+</head>
+<body onload="draw()">
+
+</body>
+<script src="../lib/three.js"></script>
+<script src="../lib/controls/OrbitControls.js"></script>
+<script src="../lib/stats.min.js"></script>
+<script>
+    let renderer
+    function initRenderer(){
+        // 初始化渲染器
+        // WebGL渲染器(抗锯齿{antialias:true})
+        renderer=new THREE.WebGLRenderer({antialias:true})
+        // 渲染尺寸
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        // 渲染阴影
+        renderer.shadowMap.enabled = true
+        // 阴影类型
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap
+        // 添加一个canvas元素
+        document.body.appendChild(renderer.domElement)
+    }
+
+    let scene
+    function initScene(){
+        scene = new THREE.Scene()
+    }
+
+    let camera
+    function initCamera() {
+        // 初始化相机
+        // 透视相机（视角，宽高比，近距点，远距点）
+        camera = new THREE.PerspectiveCamera(
+            45,
+            window.innerWidth/window.innerHeight,
+            0.1,
+            1000
+        )
+        // 相机看向
+        camera.lookAt(new THREE.Vector3(0,0,0))
+        // 相机放置位置
+        camera.position.set(200,200,200)
+    }
+
+    let ambientlight
+    function initLight() {
+        // 环境光-(color)
+        ambientlight = new THREE.AmbientLight(0xffffff)
+        scene.add(ambientlight)
+    }
+
+    // 初始化辅助线
+    function initHelpers(){
+        // x,y,z轴辅助线（size）
+        const axesHelper = new THREE.AxesHelper(50)
+        scene.add(axesHelper)
+    }
+
+    let plane,cube
+    function initModels(){
+
+        // 平面
+        const planeGeometry = new THREE.PlaneGeometry(200,200)
+        const planeMaterial = new THREE.MeshLambertMaterial({color:0x404040})
+        plane = new THREE.Mesh(planeGeometry,planeMaterial)
+        plane.rotation.x = - 0.5 * Math.PI
+        plane.receiveShadow = true
+        // 两面
+        plane.material.side = THREE.DoubleSide
+        scene.add(plane)
+
+        // 立方体
+        const cubeGeometry = new THREE.CubeGeometry(10,20,10)
+        const cubeMaterial = new THREE.MeshLambertMaterial({color:0xff00ff})
+        cube = new THREE.Mesh(cubeGeometry,cubeMaterial)
+        cube.position.set(10,10,10)
+        scene.add(cube)
+
+    }
+
+    //初始化性能插件
+    let stats
+    function initStats() {
+        stats = new Stats()
+        document.body.appendChild(stats.dom)
+    }
+
+    // 初始化交互插件-鼠标左键按住旋转，右键按住平移，滚轮缩放
+    let controls
+    function initControls() {
+        controls = new THREE.OrbitControls( camera, renderer.domElement )
+        // 如果使用animate方法时，将此函数删除
+        //controls.addEventListener( 'change', render )
+        // 使动画循环使用时阻尼或自转 意思是否有惯性
+        controls.enableDamping = true
+        //动态阻尼系数 就是鼠标拖拽旋转灵敏度
+        //controls.dampingFactor = 0.25
+        //是否可以缩放
+        controls.enableZoom = true
+        //是否自动旋转
+        controls.autoRotate = false
+        //设置相机距离原点的最近距离
+        controls.minDistance  = 0
+        //设置相机距离原点的最远距离
+        controls.maxDistance  = 1000
+        //是否开启右键拖拽
+        controls.enablePan = true
+    }
+
+    function resizeWindow() {
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        render()
+        renderer.setSize( window.innerWidth, window.innerHeight )
+    }
+
+    function render() {
+        renderer.render( scene, camera )
+    }
+
+    function animate() {
+        //更新控制器
+        render()
+
+        //更新性能插件
+        stats.update()
+
+        controls.update()
+
+        requestAnimationFrame(animate)
+    }
+
+    function draw() {
+        initCamera()
+        initRenderer()
+        initScene()
+        initLight()
+        initModels()
+        initHelpers()
+        initStats()
+        initControls()
+        animate()
+        window.onresize = resizeWindow()
+    }
+</script>
+</html>

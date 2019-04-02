@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e83e3b3-5711-4ba4-9c37-cb5772174ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helloworld/demo/demo12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloworld/demo/demo13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloworld/demo/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,19 +27,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1095" />
+          <entry key="html" value="2438" />
           <entry key="md" value="485" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1095" />
+          <entry key="HTML" value="2438" />
           <entry key="PLAIN_TEXT" value="485" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="9" />
+          <entry key="html" value="12" />
           <entry key="js" value="1" />
           <entry key="json" value="2" />
           <entry key="md" value="2" />
@@ -46,7 +47,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="9" />
+          <entry key="HTML" value="12" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -68,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helloworld/demo/demo10.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="219" lean-forward="true" selection-start-line="205" selection-start-column="7" selection-end-line="219" />
+            <state relative-caret-position="216">
+              <caret line="223" column="5" lean-forward="true" selection-start-line="198" selection-start-column="4" selection-end-line="223" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -83,22 +84,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helloworld/demo/demo12.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+            <state relative-caret-position="1323">
+              <caret line="91" column="52" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helloworld/demo/demo13.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helloworld/demo/template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helloworld/demo/demo1.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helloworld/demo/demo2.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -129,11 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helloworld/demo/demo7.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -161,6 +170,10 @@
         <option value="$PROJECT_DIR$/helloworld/demo/demo10.html" />
         <option value="$PROJECT_DIR$/helloworld/demo/demo11.html" />
         <option value="$PROJECT_DIR$/helloworld/demo/demo12.html" />
+        <option value="$PROJECT_DIR$/helloworld/demo/demo.html" />
+        <option value="$PROJECT_DIR$/helloworld/demo/demo13.html" />
+        <option value="$PROJECT_DIR$/helloworld/demo/tempart.html" />
+        <option value="$PROJECT_DIR$/helloworld/demo/template.html" />
       </list>
     </option>
   </component>
@@ -256,12 +269,12 @@
       <option name="presentableId" value="Default" />
       <updated>1552361542197</updated>
       <workItem from="1552361544021" duration="9375000" />
-      <workItem from="1554184447017" duration="10544000" />
+      <workItem from="1554184447017" duration="15257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19919000" />
+    <option name="totallyTimeSpent" value="24632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -279,7 +292,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28554216" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28554216" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -351,6 +364,27 @@
     <entry file="file://$PROJECT_DIR$/helloworld/lib/dat.gui.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld/demo/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld/demo/demo12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="91" column="52" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld/demo/demo13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helloworld/demo/demo11.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -360,15 +394,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helloworld/demo/demo10.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="219" lean-forward="true" selection-start-line="205" selection-start-column="7" selection-end-line="219" />
+        <state relative-caret-position="216">
+          <caret line="223" column="5" lean-forward="true" selection-start-line="198" selection-start-column="4" selection-end-line="223" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld/demo/demo12.html">
+    <entry file="file://$PROJECT_DIR$/helloworld/demo/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+        <state relative-caret-position="514">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
         </state>
       </provider>
     </entry>
