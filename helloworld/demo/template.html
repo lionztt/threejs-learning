@@ -47,11 +47,30 @@
         camera.position.set(200,200,200)
     }
 
-    let ambientlight
+    let ambientlight,directionalLight,spotLight
     function initLight() {
         // 环境光-(color)
-        ambientlight = new THREE.AmbientLight(0xffffff)
+        ambientlight = new THREE.AmbientLight(0xffffff,1)
         scene.add(ambientlight)
+
+        // 平行光-(color,光照强度)
+        directionalLight = new THREE.DirectionalLight(0xffffff,0.5)
+        directionalLight.castShadow = true
+        scene.add(directionalLight)
+
+        // 聚光灯
+        // new THREE.PointLight(颜色, 强度, 距离，开角);
+        spotLight = new THREE.SpotLight(0xffffff, 1, 200, Math.PI / 6)
+        spotLight.position.set(70,100,70)
+        spotLight.castShadow = true
+
+        spotLight.shadow.mapSize.width = 1024
+        spotLight.shadow.mapSize.height = 1024
+
+        spotLight.shadow.camera.near = 10
+        spotLight.shadow.camera.far = 200
+
+        scene.add(spotLight)
     }
 
     // 初始化辅助线
@@ -59,6 +78,14 @@
         // x,y,z轴辅助线（size）
         const axesHelper = new THREE.AxesHelper(50)
         scene.add(axesHelper)
+
+        // spotLight 辅助线
+        const spotLightHelper = new THREE.SpotLightHelper(spotLight)
+        scene.add(spotLightHelper)
+
+        // 能看见光源位置
+        let shadowCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera);
+        scene.add( shadowCameraHelper )
     }
 
     let plane,cube
@@ -66,7 +93,7 @@
 
         // 平面
         const planeGeometry = new THREE.PlaneGeometry(200,200)
-        const planeMaterial = new THREE.MeshLambertMaterial({color:0x404040})
+        const planeMaterial = new THREE.MeshPhysicalMaterial({color:0x404040})
         plane = new THREE.Mesh(planeGeometry,planeMaterial)
         plane.rotation.x = - 0.5 * Math.PI
         plane.receiveShadow = true
@@ -76,9 +103,10 @@
 
         // 立方体
         const cubeGeometry = new THREE.CubeGeometry(10,20,10)
-        const cubeMaterial = new THREE.MeshLambertMaterial({color:0xff00ff})
+        const cubeMaterial = new THREE.MeshPhysicalMaterial({color:0xff00ff})
         cube = new THREE.Mesh(cubeGeometry,cubeMaterial)
-        cube.position.set(10,10,10)
+        cube.position.set(0,20,0)
+        cube.castShadow = true
         scene.add(cube)
 
     }
