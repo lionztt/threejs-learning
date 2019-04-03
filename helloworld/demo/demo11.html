@@ -50,6 +50,8 @@
     function initGui() {
         //声明一个保存需求修改的相关数据的对象
         settings = {
+            lightColor: light.color.getHex(),
+            cubeColor: cube.material.color.getHex(),
             positionX:0,
             positionY:5,
             positionZ:0,
@@ -78,6 +80,9 @@
         //初始化gui
         var gui = new dat.GUI();
 
+        var color = gui.addFolder("color");
+        color.addColor(settings,"lightColor").listen();
+        color.addColor(settings,"cubeColor").listen();
         var position = gui.addFolder("position");
         position.add(settings,"positionX",-30,30).listen();
         position.add(settings,"positionY",-30,30).listen();
@@ -201,18 +206,21 @@
         cube.rotation.set(settings.rotationX,settings.rotationY,settings.rotationZ);
         cube.visible = settings.visible;
 
+        light.color.setHex(settings.lightColor);
+        cube.material.color.setHex(settings.cubeColor);
+
         controls.update();
 
         requestAnimationFrame(animate);
     }
 
     function draw() {
-        initGui();
         initRender();
         initScene();
         initCamera();
         initLight();
         initModel();
+        initGui();
         initControls();
         initStats();
 
