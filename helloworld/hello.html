@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+    <script>
+        // axios.defaults.baseURL = 'https://api.example.com';
+        axios.get('http://192.168.199.215:9000/test', {
+            params: {
+                param: 12345
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        axios.get('http://192.168.199.215:9000/test', {
+            params: {
+                param: 12345
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });    
+    </script>
+</head>
+
+<body>
+    1111122222
+</body>
+
+</html>
